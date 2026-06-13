@@ -458,6 +458,46 @@
     color:#64726d;
     line-height:1.65;
   }
+  .embed-card{
+    background:rgba(255,255,255,.96);
+    color:var(--hope-ink);
+    padding:18px;
+    border-radius:28px;
+    box-shadow:0 24px 55px rgba(0,0,0,.18);
+    border:1px solid rgba(255,255,255,.38);
+  }
+  .embed-card-header{
+    padding:16px 16px 18px;
+    border-bottom:1px solid rgba(49,86,79,.10);
+  }
+  .embed-card-header strong{
+    display:block;
+    font-family:"Plus Jakarta Sans",Inter,sans-serif;
+    font-size:1.18rem;
+    letter-spacing:-.035em;
+    color:var(--hope-deep);
+  }
+  .embed-card-header span{
+    display:block;
+    margin-top:5px;
+    color:#6a7872;
+    line-height:1.5;
+    font-size:.92rem;
+  }
+  .google-form-frame{
+    width:100%;
+    min-height:760px;
+    border:0;
+    border-radius:18px;
+    background:#f7fbf9;
+    display:block;
+  }
+  .form-replace-note{
+    margin:12px 4px 0;
+    font-size:.78rem;
+    color:#78867f;
+    line-height:1.5;
+  }
   .sheet-note{
     margin-top:24px;
     padding:22px;
@@ -468,165 +508,6 @@
   }
   .sheet-note strong{color:#ffe2ac}
   .sheet-note p{margin:8px 0 0;color:#dbe8e2;line-height:1.6}
-  .form-intro{
-    margin-bottom:22px;
-  }
-  .form-eyebrow{
-    display:inline-flex;
-    font-size:.74rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    font-weight:900;
-    color:var(--hope-clay);
-  }
-  .form-intro h3{
-    font-family:"Plus Jakarta Sans",Inter,sans-serif;
-    color:var(--hope-deep);
-    font-size:1.55rem;
-    letter-spacing:-.035em;
-    margin:6px 0 8px;
-  }
-  .form-intro p{
-    color:#64726d;
-    line-height:1.55;
-    margin:0;
-  }
-  .branded-intake-form{
-    position:relative;
-  }
-  .branded-intake-form input:focus,
-  .branded-intake-form select:focus,
-  .branded-intake-form textarea:focus{
-    outline:none;
-    border-color:var(--hope-teal-deep);
-    box-shadow:0 0 0 4px rgba(131,175,168,.18);
-  }
-  .form-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-  }
-  .hidden-field{
-    position:absolute;
-    left:-9999px;
-    opacity:0;
-    pointer-events:none;
-  }
-  .form-success,
-  .form-error{
-    margin-top:16px;
-    padding:14px 16px;
-    border-radius:14px;
-    font-weight:750;
-    line-height:1.45;
-  }
-  .form-success{
-    color:var(--hope-deep);
-    background:var(--hope-mist);
-    border:1px solid rgba(95,145,137,.28);
-  }
-  .form-error{
-    color:#7d2f24;
-    background:#f7e1dc;
-    border:1px solid rgba(199,122,96,.35);
-  }
-  .form-card button[disabled]{
-    opacity:.72;
-    cursor:not-allowed;
-    transform:none;
-  }
-
-  .form-section-title{
-    margin:24px 0 12px;
-    padding-top:18px;
-    border-top:1px solid rgba(49,86,79,.12);
-    font-family:"Plus Jakarta Sans",Inter,sans-serif;
-    color:var(--hope-deep);
-    font-size:1.05rem;
-    letter-spacing:-.02em;
-  }
-  .question-label{
-    display:block;
-    font-weight:800;
-    color:#41514c;
-    margin:16px 0 10px;
-    line-height:1.35;
-  }
-  .required-mark{
-    color:var(--hope-clay);
-    font-weight:900;
-  }
-  .choice-group{
-    display:grid;
-    gap:10px;
-    margin:8px 0 16px;
-  }
-  .choice{
-    display:flex!important;
-    align-items:flex-start;
-    gap:11px;
-    padding:12px 13px;
-    border:1px solid #d8e5df;
-    border-radius:15px;
-    background:#fbfdfc;
-    color:#43524d!important;
-    font-weight:700!important;
-    line-height:1.35;
-    cursor:pointer;
-    transition:.18s ease;
-  }
-  .choice:hover{
-    border-color:var(--hope-teal-deep);
-    background:#f6fbf9;
-  }
-  .choice input{
-    width:auto!important;
-    margin:2px 0 0!important;
-    accent-color:var(--hope-deep);
-    flex:0 0 auto;
-  }
-  .rating-wrap{
-    overflow-x:auto;
-    margin:10px 0 16px;
-    border:1px solid #d8e5df;
-    border-radius:18px;
-    background:#fbfdfc;
-  }
-  .rating-table{
-    width:100%;
-    min-width:650px;
-    border-collapse:collapse;
-  }
-  .rating-table th,
-  .rating-table td{
-    padding:13px 10px;
-    border-bottom:1px solid rgba(49,86,79,.08);
-    text-align:center;
-    color:#43524d;
-    font-size:.88rem;
-  }
-  .rating-table th:first-child,
-  .rating-table td:first-child{
-    text-align:left;
-    width:190px;
-    font-weight:800;
-    color:var(--hope-deep);
-  }
-  .rating-table tr:last-child td{
-    border-bottom:0;
-  }
-  .rating-table input{
-    width:auto!important;
-    margin:0!important;
-    accent-color:var(--hope-deep);
-  }
-  .field-help{
-    display:block;
-    margin:-5px 0 11px;
-    color:#77857f;
-    font-size:.82rem;
-    line-height:1.45;
-  }
 
   .cta{
     padding:88px 0;
@@ -636,7 +517,7 @@
       linear-gradient(135deg,var(--hope-deep),#203c37);
     color:white;
   }
-  .cta-box{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
+  .cta-box{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
   .cta .section-title{color:white}
   .cta p{color:#dbe8e2}
   .form-card{
@@ -716,7 +597,7 @@
     .hero{padding-top:125px}
     .hero:before{inset:82px -80px 0 -120px;background-position:center right;opacity:.70;filter:blur(1.5px)}
     .title{font-size:2.8rem}
-    .proof,.grid-3,.steps,.facilitators,.intake-grid,.form-row{grid-template-columns:1fr}
+    .proof,.grid-3,.steps,.facilitators,.intake-grid{grid-template-columns:1fr}
     .portrait-stage{min-height:710px}
     .portrait-card{width:76vw}
     .portrait-card.carole{left:0;top:0}
@@ -882,13 +763,13 @@
       <div class="wrap">
         <div class="center">
           <div class="kicker">Simple next step</div>
-          <h2 class="section-title">Take a simple first step toward renewal.</h2>
-          <p class="copy">This short interest form helps us learn a little about your relationship, your timing, and what you hope to gain from the course.</p>
+          <h2 class="section-title">A peaceful front door for a thoughtful course.</h2>
+          <p class="copy">Instead of sending people directly to a plain Google Form, this page gives them context, confidence, and a gentle path toward sharing their interest.</p>
         </div>
         <div class="intake-grid">
-          <article class="intake-card"><small>01</small><h3>Read the invitation</h3><p>Take a few minutes to learn the heart behind the course, the weekly rhythm, and the kind of restoration we hope couples can experience.</p></article>
-          <article class="intake-card"><small>02</small><h3>Share your interest</h3><p>Tell us a little about your timing, motivation, questions, and what would make this course meaningful for you as a couple.</p></article>
-          <article class="intake-card"><small>03</small><h3>Receive next steps</h3><p>After your form is received, the facilitators can follow up with course details, scheduling information, and any helpful next steps.</p></article>
+          <article class="intake-card"><small>01</small><h3>Read the invitation</h3><p>Couples first get a warm overview of the course, the rhythm, and the heart behind the experience.</p></article>
+          <article class="intake-card"><small>02</small><h3>Complete the form</h3><p>The embedded Google Form collects names, email addresses, timing preferences, questions, and interest level.</p></article>
+          <article class="intake-card"><small>03</small><h3>Organize follow-up</h3><p>Responses flow into Google Sheets, where they can be scored, filtered, and used for simple follow-up planning.</p></article>
         </div>
       </div>
     </section>
@@ -900,172 +781,32 @@
           <h2 class="section-title">Start with one honest step toward hope.</h2>
           <p class="copy">Share your interest, timing preferences, and any questions you may have. This short form helps the facilitators follow up with the right details before the course begins.</p>
           <div class="sheet-note">
-            <strong>What happens next:</strong>
-            <p>After you submit the form, we’ll review your interest and follow up with course details, timing, and any next steps that may be helpful. There is no pressure or obligation — this is simply a place to start the conversation.</p>
+            <strong>Behind the scenes:</strong>
+            <p>Every response can flow directly into Google Sheets for simple organization, lead scoring, and follow-up notes. Suggested columns: Interest Level, Preferred Timing, Question Type, Follow-Up Status, Priority Score, and Notes.</p>
           </div>
         </div>
-        <form class="form-card branded-intake-form" id="restoringHopeForm">
-          <input type="hidden" name="referralSource" value="Restoring Hope Landing Page">
-
-          <!-- Honeypot spam protection: real visitors will not see this field. -->
-          <div class="hidden-field" aria-hidden="true">
-            <label for="website">Website</label>
-            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        <div class="embed-card">
+          <div class="embed-card-header">
+            <strong>Restoring Hope Interest Form</strong>
+            <span>This embedded form is ready for your Google Forms link. Replace the placeholder iframe URL below with your published Google Form embed URL.</span>
           </div>
-
-          <div class="form-intro">
-            <span class="form-eyebrow">Interest Form</span>
-            <h3>Tell us how we can follow up.</h3>
-            <p>This short form helps us understand your timing, questions, and what course details would be most helpful.</p>
-          </div>
-
-          <h4 class="form-section-title">Contact Information</h4>
-
-          <label for="partner1Name">Your Name <span class="required-mark">*</span></label>
-          <input id="partner1Name" name="partner1Name" type="text" placeholder="First and last name" required>
-
-          <label for="partner1Email">Email Address <span class="required-mark">*</span></label>
-          <input id="partner1Email" name="partner1Email" type="email" placeholder="name@example.com" required>
-
-          <div class="form-row">
-            <div>
-              <label for="partner1Phone">Phone Number</label>
-              <input id="partner1Phone" name="partner1Phone" type="tel" placeholder="Optional">
-            </div>
-            <div>
-              <label for="partner2Name">Spouse / Partner Name</label>
-              <input id="partner2Name" name="partner2Name" type="text" placeholder="Optional">
-            </div>
-          </div>
-
-          <h4 class="form-section-title">Course Interest</h4>
-
-          <label for="preferredTiming">Preferred Timing <span class="required-mark">*</span></label>
-          <select id="preferredTiming" name="preferredTiming" required>
-            <option value="">Select one</option>
-            <option>As soon as possible</option>
-            <option>Within the next 1–2 months</option>
-            <option>Sometime this year</option>
-            <option>Not sure yet</option>
-          </select>
-
-          <label for="interestLevel">What best describes your interest? <span class="required-mark">*</span></label>
-          <select id="interestLevel" name="interestLevel" required>
-            <option value="">Select one</option>
-            <option>We are interested in attending</option>
-            <option>We would like course details</option>
-            <option>We have questions before deciding</option>
-            <option>I am helping someone else learn more</option>
-          </select>
-
-          <h4 class="form-section-title">Relationship Details</h4>
-
-          <span class="question-label">How many years have you been married or in a committed relationship? <span class="required-mark">*</span></span>
-          <div class="choice-group" role="radiogroup" aria-label="Years married or in a committed relationship">
-            <label class="choice"><input type="radio" name="yearsTogether" value="Less than 1 year" required> <span>Less than 1 year</span></label>
-            <label class="choice"><input type="radio" name="yearsTogether" value="1 - 5 years"> <span>1 - 5 years</span></label>
-            <label class="choice"><input type="radio" name="yearsTogether" value="6 - 15 years"> <span>6 - 15 years</span></label>
-            <label class="choice"><input type="radio" name="yearsTogether" value="16 - 25 years"> <span>16 - 25 years</span></label>
-            <label class="choice"><input type="radio" name="yearsTogether" value="More than 25 years"> <span>More than 25 years</span></label>
-          </div>
-
-          <label for="childrenTogether">Do you have any children together? If yes, how many? <span class="required-mark">*</span></label>
-          <input id="childrenTogether" name="childrenTogether" type="text" placeholder="Example: Yes, 2 children / No" required>
-
-          <span class="question-label">What is the primary motivation for taking this course? What captured your attention? <span class="required-mark">*</span></span>
-          <span class="field-help">Select all that apply.</span>
-          <div class="choice-group" id="primaryMotivationGroup">
-            <label class="choice"><input type="checkbox" name="primaryMotivation" value="Strengthening communication skills"> <span>Strengthening communication skills</span></label>
-            <label class="choice"><input type="checkbox" name="primaryMotivation" value="Conflict resolution and managing disagreements"> <span>Conflict resolution and managing disagreements</span></label>
-            <label class="choice"><input type="checkbox" name="primaryMotivation" value="Reigniting intimacy/connection"> <span>Reigniting intimacy/connection</span></label>
-            <label class="choice"><input type="checkbox" name="primaryMotivation" value="Preparing for marriage (pre-marital counseling)"> <span>Preparing for marriage (pre-marital counseling)</span></label>
-            <label class="choice"><input type="checkbox" name="primaryMotivation" value="Addressing specific relationship challenges"> <span>Addressing specific relationship challenges</span></label>
-            <label class="choice"><input type="checkbox" name="primaryMotivation" value="Learning healthy habits for long-term success"> <span>Learning healthy habits for long-term success</span></label>
-            <label class="choice"><input type="checkbox" name="primaryMotivation" value="Other"> <span>Other</span></label>
-          </div>
-
-          <label for="otherMotivationExplanation">If you selected “Other” above, please briefly explain your primary motivation.</label>
-          <textarea id="otherMotivationExplanation" name="otherMotivationExplanation" rows="3" placeholder="Optional"></textarea>
-
-          <h4 class="form-section-title">Current Relationship Satisfaction</h4>
-
-          <span class="question-label">How would you rate your current satisfaction with the following aspects of your relationship? <span class="required-mark">*</span></span>
-          <div class="rating-wrap">
-            <table class="rating-table">
-              <thead>
-                <tr>
-                  <th>Area</th>
-                  <th>Very Poor (1)</th>
-                  <th>Poor (2)</th>
-                  <th>Neutral (3)</th>
-                  <th>Good (4)</th>
-                  <th>Excellent (5)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Communication</td>
-                  <td><input type="radio" name="ratingCommunication" value="Very Poor (1)" required aria-label="Communication Very Poor"></td>
-                  <td><input type="radio" name="ratingCommunication" value="Poor (2)" aria-label="Communication Poor"></td>
-                  <td><input type="radio" name="ratingCommunication" value="Neutral (3)" aria-label="Communication Neutral"></td>
-                  <td><input type="radio" name="ratingCommunication" value="Good (4)" aria-label="Communication Good"></td>
-                  <td><input type="radio" name="ratingCommunication" value="Excellent (5)" aria-label="Communication Excellent"></td>
-                </tr>
-                <tr>
-                  <td>Trust and Honesty</td>
-                  <td><input type="radio" name="ratingTrustHonesty" value="Very Poor (1)" required aria-label="Trust and Honesty Very Poor"></td>
-                  <td><input type="radio" name="ratingTrustHonesty" value="Poor (2)" aria-label="Trust and Honesty Poor"></td>
-                  <td><input type="radio" name="ratingTrustHonesty" value="Neutral (3)" aria-label="Trust and Honesty Neutral"></td>
-                  <td><input type="radio" name="ratingTrustHonesty" value="Good (4)" aria-label="Trust and Honesty Good"></td>
-                  <td><input type="radio" name="ratingTrustHonesty" value="Excellent (5)" aria-label="Trust and Honesty Excellent"></td>
-                </tr>
-                <tr>
-                  <td>Shared Goals and Vision</td>
-                  <td><input type="radio" name="ratingSharedGoalsVision" value="Very Poor (1)" required aria-label="Shared Goals and Vision Very Poor"></td>
-                  <td><input type="radio" name="ratingSharedGoalsVision" value="Poor (2)" aria-label="Shared Goals and Vision Poor"></td>
-                  <td><input type="radio" name="ratingSharedGoalsVision" value="Neutral (3)" aria-label="Shared Goals and Vision Neutral"></td>
-                  <td><input type="radio" name="ratingSharedGoalsVision" value="Good (4)" aria-label="Shared Goals and Vision Good"></td>
-                  <td><input type="radio" name="ratingSharedGoalsVision" value="Excellent (5)" aria-label="Shared Goals and Vision Excellent"></td>
-                </tr>
-                <tr>
-                  <td>Conflict Resolution</td>
-                  <td><input type="radio" name="ratingConflictResolution" value="Very Poor (1)" required aria-label="Conflict Resolution Very Poor"></td>
-                  <td><input type="radio" name="ratingConflictResolution" value="Poor (2)" aria-label="Conflict Resolution Poor"></td>
-                  <td><input type="radio" name="ratingConflictResolution" value="Neutral (3)" aria-label="Conflict Resolution Neutral"></td>
-                  <td><input type="radio" name="ratingConflictResolution" value="Good (4)" aria-label="Conflict Resolution Good"></td>
-                  <td><input type="radio" name="ratingConflictResolution" value="Excellent (5)" aria-label="Conflict Resolution Excellent"></td>
-                </tr>
-                <tr>
-                  <td>Intimacy/Affection</td>
-                  <td><input type="radio" name="ratingIntimacyAffection" value="Very Poor (1)" required aria-label="Intimacy and Affection Very Poor"></td>
-                  <td><input type="radio" name="ratingIntimacyAffection" value="Poor (2)" aria-label="Intimacy and Affection Poor"></td>
-                  <td><input type="radio" name="ratingIntimacyAffection" value="Neutral (3)" aria-label="Intimacy and Affection Neutral"></td>
-                  <td><input type="radio" name="ratingIntimacyAffection" value="Good (4)" aria-label="Intimacy and Affection Good"></td>
-                  <td><input type="radio" name="ratingIntimacyAffection" value="Excellent (5)" aria-label="Intimacy and Affection Excellent"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <label for="relationshipStatusNotes">Is there anything else we should know regarding your history or current relationship status that may impact your participation?</label>
-          <textarea id="relationshipStatusNotes" name="relationshipStatusNotes" rows="4" placeholder="Optional"></textarea>
-
-          <h4 class="form-section-title">Final Question</h4>
-
-          <label for="ralphWindowAnswer">One glass of wine at 10,000 feet equals two glasses at sea level. Ralph had 1.5 glasses; one at 5,500 feet and then half a glass at 10,000 feet. So if he descends at 25km per hour back down to 5,500 ft, how many windows are there in New York City? Please remember to show your work.</label>
-          <textarea id="ralphWindowAnswer" name="ralphWindowAnswer" rows="4" placeholder="Show your work, obviously."></textarea>
-
-          <button class="btn" type="submit" id="submitButton">Request Course Details</button>
-          <p class="small">Your information will only be used to follow up about the Restoring Hope course.</p>
-
-          <div class="form-success" id="formSuccess" hidden>
-            Thank you — your interest form has been received.
-          </div>
-
-          <div class="form-error" id="formError" hidden>
-            Something went wrong. Please try again.
-          </div>
-        </form>
+          <!--
+            GOOGLE FORM EMBED INSTRUCTIONS
+            1. Open your Google Form.
+            2. Click Send.
+            3. Choose the <> Embed icon.
+            4. Copy the iframe src URL.
+            5. Replace YOUR_GOOGLE_FORM_EMBED_URL below with that src URL.
+          -->
+          <iframe
+            class="google-form-frame"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdFwNZ2Khv5zXK9sM5x19trZ-3LpaS-woineBtakiJs_ZlmeQ/viewform?usp=publish-editor"
+            loading="lazy"
+            title="Restoring Hope Interest Form">
+            Loading…
+          </iframe>
+          <p class="form-replace-note">Tip: in Google Forms, use a matching header image and warm section descriptions so the embedded form feels consistent with this page.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -1077,61 +818,5 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script>
-    /*
-      GOOGLE APPS SCRIPT SETUP
-      1. Create a Google Sheet with a tab named "Responses".
-      2. Open Extensions > Apps Script and paste the doPost(e) script.
-      3. Deploy the Apps Script as a Web App.
-      4. Set "Execute as" to "Me" and "Who has access" to "Anyone".
-      5. Paste the Web App URL below. It should end with /exec.
-    */
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbweC4-ltfwg0kP4igwHEkZtznu51aae2mljf3842wcay5ZchJSiSZJzOHbzEwubXyZW/exec";
-
-    const form = document.getElementById("restoringHopeForm");
-    const submitButton = document.getElementById("submitButton");
-    const formSuccess = document.getElementById("formSuccess");
-    const formError = document.getElementById("formError");
-
-    if (form) {
-      form.addEventListener("submit", async function(event) {
-        event.preventDefault();
-
-        formSuccess.hidden = true;
-        formError.hidden = true;
-        formError.textContent = "Something went wrong. Please try again.";
-        submitButton.disabled = true;
-        submitButton.textContent = "Sending...";
-
-        const checkedMotivations = form.querySelectorAll('input[name="primaryMotivation"]:checked');
-        if (checkedMotivations.length === 0) {
-          formError.textContent = "Please select at least one primary motivation.";
-          formError.hidden = false;
-          submitButton.textContent = "Request Course Details";
-          submitButton.disabled = false;
-          document.getElementById("primaryMotivationGroup").scrollIntoView({ behavior: "smooth", block: "center" });
-          return;
-        }
-
-        const formData = new FormData(form);
-
-        try {
-          await fetch(SCRIPT_URL, {
-            method: "POST",
-            body: formData,
-            mode: "no-cors"
-          });
-
-          form.reset();
-          formSuccess.hidden = false;
-        } catch (error) {
-          formError.hidden = false;
-        } finally {
-          submitButton.textContent = "Request Course Details";
-          submitButton.disabled = false;
-        }
-      });
-    }
-  </script>
 </body>
 </html>
