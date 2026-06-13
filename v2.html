@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restoring Hope | Marriage Course</title>
+  <meta name="description" content="A 6–8 week marriage course built around Restoring Hope: An Integrative Approach to Marital Therapy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --hope-ink:#27312f;
+      --hope-deep:#31564f;
+      --hope-teal:#83afa8;
+      --hope-teal-deep:#5f9189;
+      --hope-gold:#d7a844;
+      --hope-clay:#c77a60;
+      --hope-clay-soft:#ead1c5;
+      --hope-cream:#fbf7ef;
+      --hope-linen:#f1e7da;
+      --hope-mist:#e7f0ed;
+      --hope-white:#ffffff;
+      --shadow:0 24px 70px rgba(39,49,47,.12);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--hope-ink);
+      background:var(--hope-cream);
+    }
+    a{color:inherit}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+
+    .site-header{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:50;
+      background:rgba(251,247,239,.84);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(47,74,66,.12);
+    }
+    .nav{
+      height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:26px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      font-weight:900;
+      letter-spacing:-.04em;
+      font-family:"Plus Jakarta Sans",Inter,sans-serif;
+      color:var(--hope-deep);
+      font-size:1.22rem;
+    }
+    .brand-mark{
+      width:46px;
+      height:46px;
+      border-radius:15px;
+      display:grid;
+      place-items:center;
+      background:transparent;
+      box-shadow:0 12px 30px rgba(49,86,79,.13);
+      overflow:hidden;
+      flex:0 0 46px;
+    }
+    .brand-mark img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:.92rem;
+      font-weight:700;
+      color:#51625c;
+    }
+    .nav-links a{text-decoration:none}
+    .nav-links a:hover{color:var(--hope-deep)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
+      padding:15px 24px;
+      border-radius:999px;
+      background:var(--hope-deep);
+      color:white!important;
+      text-decoration:none!important;
+      font-weight:850;
+      box-shadow:0 12px 28px rgba(47,74,66,.2);
+      transition:.22s ease;
+      border:0;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-2px);background:#274840}
+    .btn.secondary{
+      background:transparent;
+      color:var(--hope-deep)!important;
+      border:2px solid rgba(47,74,66,.75);
+      box-shadow:none;
+    }
+
+    .kicker{
+      font-weight:900;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--hope-clay);
+      font-size:.78rem;
+    }
+    .title{
+      font-family:"Plus Jakarta Sans",Inter,sans-serif;
+      font-size:clamp(2.65rem,5.4vw,5.75rem);
+      line-height:.95;
+      letter-spacing:-.06em;
+      margin:.28em 0;
+      color:var(--hope-ink);
+    }
+    .section-title{
+      font-family:"Plus Jakarta Sans",Inter,sans-serif;
+      font-size:clamp(2.15rem,4vw,4.15rem);
+      line-height:1;
+      letter-spacing:-.055em;
+      margin:.24em 0;
+      color:var(--hope-ink);
+    }
+    .copy{
+      font-size:1.08rem;
+      line-height:1.75;
+      color:#5a6964;
+    }
+
+    .hero{
+      position:relative;
+      min-height:760px;
+      display:grid;
+      align-items:center;
+      padding:150px 0 92px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 78% 16%,rgba(215,168,68,.22),transparent 30%),
+        radial-gradient(circle at 12% 72%,rgba(131,175,168,.24),transparent 35%),
+        radial-gradient(circle at 90% 88%,rgba(199,122,96,.16),transparent 32%),
+        linear-gradient(135deg,#fffaf4 0%,#f3e8dc 54%,#e6f0ed 100%);
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:110px auto auto -120px;
+      width:360px;
+      height:360px;
+      border-radius:50%;
+      border:1px solid rgba(47,74,66,.12);
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0;
+      height:110px;
+      background:linear-gradient(to bottom,transparent,var(--hope-cream));
+      pointer-events:none;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:64px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+    .hero-card{max-width:675px}
+    .badge{
+      display:inline-flex;
+      padding:9px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.68);
+      border:1px solid rgba(47,74,66,.16);
+      color:var(--hope-deep);
+      font-weight:850;
+      backdrop-filter:blur(10px);
+    }
+    .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+    .proof{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:36px;
+    }
+    .proof div{
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(47,74,66,.1);
+      backdrop-filter:blur(8px);
+    }
+    .proof strong{display:block;font-size:1.2rem;color:var(--hope-deep)}
+    .proof span{display:block;margin-top:4px;color:#66736e;font-size:.92rem}
+
+    .portrait-stage{
+      position:relative;
+      min-height:590px;
+    }
+    .portrait-card{
+      position:absolute;
+      width:min(270px,45vw);
+      border-radius:34px;
+      overflow:hidden;
+      background:transparent;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(49,86,79,.10);
+    }
+    .portrait-card img{
+      display:block;
+      width:100%;
+      height:auto;
+      background:transparent;
+    }
+    .portrait-card.carole{right:170px;top:16px;transform:rotate(-4deg)}
+    .portrait-card.ralph{right:0;top:132px;transform:rotate(5deg)}
+    .portrait-note{
+      position:absolute;
+      left:0;
+      bottom:70px;
+      max-width:345px;
+      border-radius:28px;
+      padding:24px;
+      background:rgba(47,74,66,.92);
+      color:white;
+      box-shadow:0 24px 55px rgba(47,74,66,.22);
+    }
+    .portrait-note strong{display:block;font-size:1.1rem;margin-bottom:7px}
+    .portrait-note p{margin:0;color:#e7f0eb;line-height:1.55}
+
+    .section{padding:95px 0}
+    .section.alt{background:var(--hope-linen)}
+    .section.dark{background:var(--hope-deep);color:white}
+    .center{text-align:center;max-width:790px;margin:0 auto 52px}
+    .center .copy{margin-bottom:0}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .card{
+      background:white;
+      border-radius:26px;
+      padding:30px;
+      border:1px solid rgba(49,86,79,.10);
+      box-shadow:0 18px 45px rgba(39,49,47,.07);
+    }
+    .icon{
+      width:50px;height:50px;border-radius:16px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,rgba(131,175,168,.18),rgba(215,168,68,.16));
+      color:var(--hope-deep);
+      font-weight:900;
+    }
+    .card h3{
+      font-family:"Plus Jakarta Sans",Inter,sans-serif;
+      font-size:1.24rem;
+      margin:18px 0 10px;
+      letter-spacing:-.02em;
+      color:var(--hope-ink);
+    }
+    .card p{margin:0;color:#64726d;line-height:1.65}
+
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .quote-panel{
+      min-height:520px;
+      border-radius:34px;
+      padding:38px;
+      display:grid;
+      align-content:end;
+      background:
+        linear-gradient(to bottom,rgba(49,86,79,.08),rgba(49,86,79,.86)),
+        url("images/carolesketch.png") center 12% / cover no-repeat;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .quote-panel blockquote{margin:0;color:white;font-size:1.5rem;line-height:1.35;font-weight:800;letter-spacing:-.03em}
+    .quote-panel cite{display:block;margin-top:16px;color:#dce9e3;font-style:normal;font-weight:700}
+    .checks{display:grid;gap:14px;margin:28px 0}
+    .check{display:flex;gap:13px;align-items:flex-start;color:#53615d;line-height:1.55}
+    .check i{flex:0 0 26px;height:26px;border-radius:50%;background:var(--hope-gold);color:white;display:grid;place-items:center;font-style:normal;font-weight:900}
+    .check strong{color:var(--hope-deep)}
+
+    .numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+    .number{padding:26px 18px;border-radius:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);text-align:center}
+    .number strong{display:block;font-size:2rem;color:#ffe2ac;font-family:"Plus Jakarta Sans",Inter,sans-serif;letter-spacing:-.04em}
+    .number span{color:#dbe8e2;font-size:.92rem}
+
+    .steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .step{position:relative;padding:28px;border-radius:23px;background:white;border-top:5px solid var(--hope-teal)}
+    .step:before{counter-increment:step;content:"0" counter(step);font-weight:900;color:var(--hope-gold);font-size:2rem;font-family:"Plus Jakarta Sans",Inter,sans-serif}
+    .step h3{font-family:"Plus Jakarta Sans",Inter,sans-serif;color:var(--hope-deep);letter-spacing:-.025em}
+    .step p{color:#66736e;line-height:1.6;margin-bottom:0}
+
+    .facilitators{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+    .facilitator{
+      background:white;
+      border-radius:30px;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:220px 1fr;
+      align-items:center;
+      border:1px solid rgba(49,86,79,.10);
+      box-shadow:0 18px 45px rgba(39,49,47,.07);
+    }
+    .facilitator img{width:100%;height:300px;object-fit:cover;object-position:center top;background:var(--hope-linen)}
+    .facilitator div{padding:26px}
+    .facilitator h3{font-family:"Plus Jakarta Sans",Inter,sans-serif;margin:0 0 8px;font-size:1.45rem;letter-spacing:-.035em;color:var(--hope-deep)}
+    .facilitator p{margin:0;color:#64726d;line-height:1.65}
+
+    .cta{
+      padding:88px 0;
+      background:
+        radial-gradient(circle at 85% 20%,rgba(215,168,68,.30),transparent 28%),
+        radial-gradient(circle at 15% 85%,rgba(199,122,96,.18),transparent 30%),
+        linear-gradient(135deg,var(--hope-deep),#203c37);
+      color:white;
+    }
+    .cta-box{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+    .cta .section-title{color:white}
+    .cta p{color:#dbe8e2}
+    .form-card{
+      background:white;
+      color:var(--hope-ink);
+      padding:30px;
+      border-radius:26px;
+      box-shadow:0 24px 55px rgba(0,0,0,.18);
+    }
+    .form-card label{display:block;font-weight:750;color:#41514c;margin-bottom:5px}
+    .form-card input,.form-card select,.form-card textarea{
+      width:100%;padding:13px 14px;border:1px solid #cfddd5;border-radius:13px;margin:6px 0 13px;font:inherit;background:#fbfdfc;
+    }
+    .form-card button{width:100%;border:0}
+    .small{font-size:.8rem;color:#77857f;line-height:1.5;margin:10px 0 0}
+    .footer{padding:34px 0;background:#223a35;color:#dbe8e2}
+    .footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer a{text-decoration:none;color:#ffe2ac}
+
+    @media(max-width:980px){
+      .nav-links{display:none}
+      .hero-grid,.split,.cta-box{grid-template-columns:1fr}
+      .portrait-stage{min-height:520px;max-width:620px}
+      .portrait-card.carole{left:0;right:auto}
+      .portrait-card.ralph{right:0}
+      .grid-3,.steps{grid-template-columns:1fr 1fr}
+      .numbers{grid-template-columns:1fr 1fr}
+      .facilitators{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .wrap{width:min(100% - 28px,1180px)}
+      .hero{padding-top:125px}
+      .title{font-size:2.8rem}
+      .proof,.grid-3,.steps,.facilitators{grid-template-columns:1fr}
+      .portrait-stage{min-height:710px}
+      .portrait-card{width:76vw}
+      .portrait-card.carole{left:0;top:0}
+      .portrait-card.ralph{right:0;top:230px}
+      .portrait-note{left:0;right:0;bottom:0;max-width:none}
+      .facilitator{grid-template-columns:1fr}
+      .facilitator img{height:360px}
+      .section{padding:70px 0}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="#top" class="brand" aria-label="Restoring Hope home"><span class="brand-mark"><img src="images/venndiagramm.png" alt=""></span><span>Restoring Hope</span></a>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#about">About</a>
+        <a href="#journey">The Journey</a>
+        <a href="#facilitators">Facilitators</a>
+        <a href="#interest">Get Details</a>
+      </nav>
+      <a class="btn" href="#interest">Join the Interest List</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-card">
+          <span class="badge">A 6–8 week marriage course</span>
+          <div class="kicker" style="margin-top:24px">Restoring Hope</div>
+          <h1 class="title">A guided path toward renewal, repair, and reconnection.</h1>
+          <p class="copy">Built around <em>Restoring Hope: An Integrative Approach to Marital Therapy</em>, this course helps couples slow down, understand their patterns, and begin practicing healthier ways of listening, responding, and rebuilding trust.</p>
+          <div class="actions">
+            <a class="btn" href="#interest">Request Course Details</a>
+            <a class="btn secondary" href="#about">Explore the Course</a>
+          </div>
+          <div class="proof">
+            <div><strong>6–8 Weeks</strong><span>Structured sessions</span></div>
+            <div><strong>Practical</strong><span>Tools couples can use</span></div>
+            <div><strong>Hopeful</strong><span>Grounded and guided</span></div>
+          </div>
+        </div>
+        <div class="portrait-stage" aria-label="Facilitator sketches">
+          <div class="portrait-card carole"><img src="images/carolesketch.svg" alt="Sketch portrait of Carole"></div>
+          <div class="portrait-card ralph"><img src="images/ralphsketch.svg" alt="Sketch portrait of Ralph"></div>
+          <div class="portrait-note"><strong>Led with care and humility.</strong><p>Designed as a welcoming classroom-style experience for couples who want a thoughtful, steady place to begin again.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="wrap">
+        <div class="center">
+          <div class="kicker">What this course is about</div>
+          <h2 class="section-title">Hope is not a vague feeling. It is something couples can practice.</h2>
+          <p class="copy">The course creates space for honest reflection, better communication, and renewed commitment. Each session is designed to help couples understand what is happening beneath conflict and learn how to move toward one another with more clarity and compassion.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><div class="icon">01</div><h3>Understand the cycle</h3><p>Identify the patterns, reactions, assumptions, and emotional triggers that keep couples stuck.</p></article>
+          <article class="card"><div class="icon">02</div><h3>Practice repair</h3><p>Learn simple tools for listening, responding, apologizing, and returning to connection after hurt.</p></article>
+          <article class="card"><div class="icon">03</div><h3>Rebuild hope</h3><p>Create a realistic path forward through steady conversations, shared commitments, and grace-filled effort.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap split">
+        <div class="quote-panel">
+          <blockquote>“The goal is not to pretend marriage is easy. The goal is to help couples believe healing is possible.”</blockquote>
+          <cite>Restoring Hope course theme</cite>
+        </div>
+        <div>
+          <div class="kicker">For couples who want to grow</div>
+          <h2 class="section-title">A calm, structured place to do meaningful work.</h2>
+          <p class="copy">This is not meant to be a lecture series couples simply watch. It is a guided process with teaching, reflection, discussion, and practical application between sessions.</p>
+          <div class="checks">
+            <div class="check"><i>✓</i><div><strong>For couples in different seasons.</strong><br>Helpful for couples facing disconnection, communication strain, repeated conflict, or a desire to strengthen their relationship.</div></div>
+            <div class="check"><i>✓</i><div><strong>Built around accessible language.</strong><br>The material is organized so key ideas can be understood, remembered, and practiced.</div></div>
+            <div class="check"><i>✓</i><div><strong>Designed for weekly momentum.</strong><br>Each session builds on the last so couples can make steady progress over time.</div></div>
+          </div>
+          <a class="btn" href="#journey">See the Session Flow</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="wrap">
+        <div class="center">
+          <div class="kicker" style="color:#ffe2ac">Course snapshot</div>
+          <h2 class="section-title" style="color:white">A thoughtful framework for restoration.</h2>
+          <p class="copy" style="color:#dbe8e2">The format is built to help couples move from insight to action without feeling rushed, shamed, or overwhelmed.</p>
+        </div>
+        <div class="numbers">
+          <div class="number"><strong>6–8</strong><span>Weeks of sessions</span></div>
+          <div class="number"><strong>5</strong><span>Nights per week, if needed</span></div>
+          <div class="number"><strong>30+</strong><span>Possible teaching blocks</span></div>
+          <div class="number"><strong>1</strong><span>Shared goal: restored hope</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section">
+      <div class="wrap">
+        <div class="center">
+          <div class="kicker">The course journey</div>
+          <h2 class="section-title">A clear rhythm from awareness to renewal.</h2>
+        </div>
+        <div class="steps">
+          <article class="step"><h3>Recognize</h3><p>Begin naming the relationship patterns, pain points, and hopes each couple brings into the room.</p></article>
+          <article class="step"><h3>Understand</h3><p>Explore what is happening emotionally, relationally, and spiritually beneath recurring conflict.</p></article>
+          <article class="step"><h3>Practice</h3><p>Learn tools for communication, repair, empathy, boundaries, and emotional regulation.</p></article>
+          <article class="step"><h3>Continue</h3><p>Leave with next steps couples can keep practicing after the course ends.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="facilitators" class="section alt">
+      <div class="wrap">
+        <div class="center">
+          <div class="kicker">Meet your facilitators</div>
+          <h2 class="section-title">Guides for the conversation, not judges of the journey.</h2>
+          <p class="copy">Ralph and Carole bring warmth, steadiness, and a heart for helping couples find practical hope in the middle of real-life challenges.</p>
+        </div>
+        <div class="facilitators">
+          <article class="facilitator"><img src="images/ralphsketch.svg" alt="Sketch portrait of Ralph"><div><h3>Ralph</h3><p>Ralph helps create a steady, thoughtful environment where couples can slow down, reflect clearly, and take practical next steps.</p></div></article>
+          <article class="facilitator"><img src="images/carolesketch.svg" alt="Sketch portrait of Carole"><div><h3>Carole</h3><p>Carole brings warmth and care to the process, helping couples engage difficult topics with honesty, dignity, and hope.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interest" class="cta">
+      <div class="wrap cta-box">
+        <div>
+          <div class="kicker" style="color:#ffe2ac">Course interest</div>
+          <h2 class="section-title">Start with one honest step toward hope.</h2>
+          <p class="copy">Use this placeholder form area to collect names, questions, preferred timing, or a simple “I’m interested” response before the course begins.</p>
+        </div>
+        <form class="form-card" action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="First and last name">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com">
+          <label for="status">What best describes your interest?</label>
+          <select id="status" name="status">
+            <option>We would like course details</option>
+            <option>We have questions before deciding</option>
+            <option>We are interested in attending</option>
+            <option>I am helping someone else learn more</option>
+          </select>
+          <label for="message">Questions or notes</label>
+          <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
+          <button class="btn" type="submit">Request Course Details</button>
+          <p class="small">This sample form is a placeholder for GitHub Pages. Connect it to Formspree, Google Forms, or another form handler before publishing.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div>© <span id="year">2026</span> Restoring Hope Course</div>
+      <div>Built for a marriage restoration course based on <em>Restoring Hope</em>.</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
