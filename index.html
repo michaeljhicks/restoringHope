@@ -318,7 +318,6 @@
   .step h3{font-family:"Plus Jakarta Sans",Inter,sans-serif;color:var(--hope-deep);letter-spacing:-.025em}
   .step p{color:#66736e;line-height:1.6;margin-bottom:0}
 
-  /* Updated Facilitator Layout */
   .facilitators{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -411,8 +410,6 @@
     color:#64726d;
     line-height:1.55;
   }
-
-
 
   .intake-preview{
     padding:95px 0;
@@ -642,7 +639,21 @@
       linear-gradient(135deg,var(--hope-deep),#203c37);
     color:white;
   }
-  .cta-box{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
+  .cta-box{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:44px;
+    align-items:start;
+  }
+
+  .cta-box > div{
+    width:100%;
+  }
+
+  .cta-box .form-card{
+    width:100%;
+    max-width:100%;
+  }
   .cta .section-title{color:white}
   .cta p{color:#dbe8e2}
   .form-card{
@@ -701,7 +712,6 @@
       min-width:0;
     }
 
-    /* Tablet/mobile portrait fix: keep both faces visible and move the note below. */
     .portrait-stage{
       min-height:auto;
       max-width:620px;
@@ -856,7 +866,6 @@
       padding:70px 0;
     }
 
-    /* Mobile portrait fix: stack the sketches so both faces are visible. */
     .portrait-stage{
       min-height:auto;
       max-width:320px;
@@ -897,7 +906,6 @@
       margin-top:4px;
     }
 
-    /* Mobile form fix: keep the full registration section inside the viewport. */
     .cta{
       overflow:hidden;
     }
@@ -1050,61 +1058,60 @@
     </section>
 
     <section id="facilitators" class="section alt">
-  <div class="wrap">
-    <div class="center">
-      <div class="kicker">Meet your facilitators</div>
-      <h2 class="section-title">Guides for the conversation, not judges of the journey.</h2>
-      <p class="copy">Ralph and Carole bring warmth, steadiness, and a heart for helping couples find practical hope in the middle of real-life challenges. With 50+ years of marriage, they've just about seen it all.</p>
-    </div>
-
-    <div class="facilitators">
-      <article class="facilitator">
-        <img src="images/ralphsketch.svg" alt="Sketch portrait of Ralph">
-        <div>
-          <h3>Ralph</h3>
-          <p>Ralph helps create a steady, thoughtful environment where couples can slow down, reflect clearly, and take practical next steps.</p>
+      <div class="wrap">
+        <div class="center">
+          <div class="kicker">Meet your facilitators</div>
+          <h2 class="section-title">Guides for the conversation, not judges of the journey.</h2>
+          <p class="copy">Ralph and Carole bring warmth, steadiness, and a heart for helping couples find practical hope in the middle of real-life challenges. With 50+ years of marriage, they've just about seen it all.</p>
         </div>
-      </article>
 
-      <article class="facilitator">
-        <img src="images/carolesketch.svg" alt="Sketch portrait of Carole">
-        <div>
-          <h3>Carole</h3>
-          <p>Carole brings warmth and care to the process, helping couples engage difficult topics with honesty, dignity, and hope.</p>
+        <div class="facilitators">
+          <article class="facilitator">
+            <img src="images/ralphsketch.svg" alt="Sketch portrait of Ralph">
+            <div>
+              <h3>Ralph</h3>
+              <p>Ralph helps create a steady, thoughtful environment where couples can slow down, reflect clearly, and take practical next steps.</p>
+            </div>
+          </article>
+
+          <article class="facilitator">
+            <img src="images/carolesketch.svg" alt="Sketch portrait of Carole">
+            <div>
+              <h3>Carole</h3>
+              <p>Carole brings warmth and care to the process, helping couples engage difficult topics with honesty, dignity, and hope.</p>
+            </div>
+          </article>
+
+          <article class="facilitator">
+            <img src="images/bodog.svg" alt="Sketch portrait of Bo the dog">
+            <div>
+              <h3>Bo</h3>
+              <p>Bo is our Chief Comfort Officer. He specializes in unconditional encouragement, strategic napping, snack inspection, and quietly reminding everyone that sometimes the most spiritual thing you can do is take a deep breath and pet the dog.</p>
+            </div>
+          </article>
         </div>
-      </article>
 
-      <article class="facilitator">
-        <img src="images/bodog.svg" alt="Sketch portrait of Bo the dog">
-        <div>
-          <h3>Bo</h3>
-          <p>Bo is our Chief Comfort Officer. He specializes in unconditional encouragement, strategic napping, snack inspection, and quietly reminding everyone that sometimes the most spiritual thing you can do is take a deep breath and pet the dog.</p>
+        <div class="facilitator-callout">
+          <div class="facilitator-callout-icon">♡</div>
+          <div>
+            <strong>You don’t have to walk this road alone.</strong>
+            <p>Restoring Hope is a place to reconnect, rebuild, and rediscover the hope you thought was lost.</p>
+          </div>
+          <a class="btn" href="#interest">Register Now</a>
         </div>
-      </article>
-    </div>
-
-    <div class="facilitator-callout">
-      <div class="facilitator-callout-icon">♡</div>
-      <div>
-        <strong>You don’t have to walk this road alone.</strong>
-        <p>Restoring Hope is a place to reconnect, rebuild, and rediscover the hope you thought was lost.</p>
       </div>
-      <a class="btn" href="#interest">Register Now</a>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <section class="intake-preview">
       <div class="wrap">
         <div class="center">
           <div class="kicker">Simple next step</div>
           <h2 class="section-title">Take a simple first step toward renewal.</h2>
-          <p class="copy">This short interest form helps us learn a little about your relationship, your timing, and what you hope to gain from the course.</p>
+          <p class="copy">This short interest form helps us learn a little about your relationship, your questions, and what you hope to gain from the course.</p>
         </div>
         <div class="intake-grid">
           <article class="intake-card"><small>01</small><h3>Read the invitation</h3><p>Take a few minutes to learn the heart behind the course, the weekly rhythm, and the kind of restoration we hope couples can experience.</p></article>
-          <article class="intake-card"><small>02</small><h3>Share your interest</h3><p>Tell us a little about your timing, motivation, questions, and what would make this course meaningful for you as a couple.</p></article>
+          <article class="intake-card"><small>02</small><h3>Share your interest</h3><p>Tell us a little about your motivation, questions, and what would make this course meaningful for you as a couple.</p></article>
           <article class="intake-card"><small>03</small><h3>Receive next steps</h3><p>After your form is received, the facilitators can follow up with course details, scheduling information, and any helpful next steps.</p></article>
         </div>
       </div>
@@ -1115,10 +1122,10 @@
         <div>
           <div class="kicker" style="color:#ffe2ac">Course interest</div>
           <h2 class="section-title">Start with one honest step toward hope.</h2>
-          <p class="copy">Share your interest, timing preferences, and any questions you may have. This short form helps the facilitators follow up with the right details before the course begins.</p>
+          <p class="copy">Share your interest and any questions you may have. This short form helps the facilitators follow up with the right details before the course begins.</p>
           <div class="sheet-note">
             <strong>What happens next:</strong>
-            <p>After you submit the form, we’ll review your interest and follow up with course details, timing, and any next steps that may be helpful. There is no pressure or obligation — this is simply a place to start the conversation.</p>
+            <p>After you submit the form, we’ll review your interest and follow up with course details and any next steps that may be helpful. There is no pressure or obligation — this is simply a place to start the conversation.</p>
           </div>
         </div>
         <form class="form-card branded-intake-form" id="restoringHopeForm">
@@ -1133,7 +1140,7 @@
           <div class="form-intro">
             <span class="form-eyebrow">Interest Form</span>
             <h3>Tell us how we can follow up.</h3>
-            <p>This short form helps us understand your timing, questions, and what course details would be most helpful.</p>
+            <p>This short form helps us understand your questions and what course details would be most helpful.</p>
           </div>
 
           <h4 class="form-section-title">Contact Information</h4>
@@ -1154,26 +1161,6 @@
               <input id="partner2Name" name="partner2Name" type="text" placeholder="Optional">
             </div>
           </div>
-
-          <h4 class="form-section-title">Course Interest</h4>
-
-          <label for="preferredTiming">Preferred Timing <span class="required-mark">*</span></label>
-          <select id="preferredTiming" name="preferredTiming" required>
-            <option value="">Select one</option>
-            <option>As soon as possible</option>
-            <option>Within the next 1–2 months</option>
-            <option>Sometime this year</option>
-            <option>Not sure yet</option>
-          </select>
-
-          <label for="interestLevel">What best describes your interest? <span class="required-mark">*</span></label>
-          <select id="interestLevel" name="interestLevel" required>
-            <option value="">Select one</option>
-            <option>We are interested in attending</option>
-            <option>We would like course details</option>
-            <option>We have questions before deciding</option>
-            <option>I am helping someone else learn more</option>
-          </select>
 
           <h4 class="form-section-title">Relationship Details</h4>
 
@@ -1266,11 +1253,6 @@
 
           <label for="relationshipStatusNotes">Is there anything else we should know regarding your history or current relationship status that may impact your participation?</label>
           <textarea id="relationshipStatusNotes" name="relationshipStatusNotes" rows="4" placeholder="Optional"></textarea>
-
-          <h4 class="form-section-title">Final Question</h4>
-
-          <label for="ralphWindowAnswer">One glass of wine at 10,000 feet equals two glasses at sea level. Ralph had 1.5 glasses; one at 5,500 feet and then half a glass at 10,000 feet. So if he descends at 25km per hour back down to 5,500 ft, how many windows are there in New York City? Please remember to show your work.</label>
-          <textarea id="ralphWindowAnswer" name="ralphWindowAnswer" rows="4" placeholder="Show your work, obviously."></textarea>
 
           <button class="btn" type="submit" id="submitButton">Request Course Details</button>
           <p class="small">Your information will only be used to follow up about the Restoring Hope course.</p>
